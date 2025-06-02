@@ -2,11 +2,11 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
-// Importar pantallas
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import CalculatorScreen from '../screens/CalculatorScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import TasksStack from './TasksStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,6 +25,8 @@ export default function TabNavigator() {
                 iconName = focused ? 'calculator' : 'calculator-outline';
             } else if (route.name === 'Ajustes') {
                 iconName = focused ? 'settings' : 'settings-outline';
+            } else if (route.name === 'Tareas') {
+                iconName = focused ? 'list' : 'list-outline';
             }
 
             return <Ionicons name={iconName} size={size} color={color} />;
@@ -43,6 +45,7 @@ export default function TabNavigator() {
         <Tab.Screen name="Inicio" component={HomeScreen} />
         <Tab.Screen name="Perfil" component={ProfileScreen} />
         <Tab.Screen name="Calculadora" component={CalculatorScreen} />
+        <Tab.Screen name="Tareas" component={TasksStack} />
         <Tab.Screen name="Ajustes" component={SettingsScreen} />
         </Tab.Navigator>
     );

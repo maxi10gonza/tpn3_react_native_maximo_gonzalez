@@ -26,13 +26,12 @@ export default function ProfileScreen() {
     return (
         <SafeAreaView style={styles.container}>
         <ScrollView style={styles.content}>
-            {/* Avatar y información básica */}
             <View style={styles.profileHeader}>
             <View style={styles.avatar}>
                 <Ionicons name="person" size={60} color="white" />
             </View>
-            <Text style={styles.name}>Juan Pérez</Text>
-            <Text style={styles.email}>juan.perez@email.com</Text>
+            <Text style={styles.name}>Maximo Gonzalez</Text>
+            <Text style={styles.email}>maximo.gonza@email.com</Text>
             <TouchableOpacity 
                 style={styles.editButton}
                 onPress={() => showAlert('Editar Perfil Básico')}
@@ -41,7 +40,6 @@ export default function ProfileScreen() {
             </TouchableOpacity>
             </View>
 
-            {/* Estadísticas del usuario */}
             <View style={styles.statsSection}>
             <View style={styles.statItem}>
                 <Text style={styles.statNumber}>156</Text>
@@ -57,7 +55,6 @@ export default function ProfileScreen() {
             </View>
             </View>
 
-            {/* Opciones del perfil */}
             <View style={styles.optionsSection}>
             <Text style={styles.sectionTitle}>Configuración</Text>
             {profileOptions.map((option, index) => (
@@ -77,7 +74,6 @@ export default function ProfileScreen() {
             ))}
             </View>
 
-            {/* Información adicional */}
             <View style={styles.infoSection}>
             <Text style={styles.sectionTitle}>Información</Text>
             <View style={styles.infoRow}>
@@ -86,7 +82,7 @@ export default function ProfileScreen() {
             </View>
             <View style={styles.infoRow}>
                 <Text style={styles.infoLabel}>Ubicación:</Text>
-                <Text style={styles.infoValue}>Buenos Aires, Argentina</Text>
+                <Text style={styles.infoValue}>Formosa, Argentina</Text>
             </View>
             <View style={styles.infoRow}>
                 <Text style={styles.infoLabel}>Último acceso:</Text>
